@@ -11,7 +11,7 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 怎么个事呢.</tw-noscript></noscript></tw-story>
 <tw-storydata name="怎么个事呢" startnode="12" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="80AC621A-A8AA-4A86-8A04-2470FA069800" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="主画面" tags="" position="225,275" size="100,100">(set:$time to 0)(set:$eventgroup to 0)
 (text-size:2)[现在是$time：00]。
-(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 6, &quot;false&quot;))(set:$status1 to (cond:$eventgroup &gt;= 1, &quot;true&quot;, $eventgroup &lt;= 1, &quot;false&quot;))
+(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 6, &quot;false&quot;))
 
 魔法有了，公主有了，再迟一点，王子殿下和他的室友们该睡觉了。
 赶在王子的冥想结束之前，你需要——
@@ -221,7 +221,7 @@
 倚着监牢一般的卷帘门，你不由得打量眼前的这位同伴。事到如今，都到了这个时间点，(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]也懒得挣扎，转而摆出无所谓的认命表情，盯着你，等你的下一个计划说出口了。](if:$event5 is 1)[马路墩子真的不好坐，而且就算没穿着校服、不、不如说就是因为没穿校服，你们看起来更像是逃学逃家的青少年了。
 青少年的伤春悲秋也没多少，吃味的那个气氛很快散了个干净，他拎着你的后衣领把你揪起来，征询的眼神堪称凶恶。
 你像一只被拎着的猫，准备胡乱用爪子指一个方向——]
-
+(set:$status1 to (cond:$eventgroup &gt;= 1, &quot;true&quot;, $eventgroup &lt;= 1, &quot;false&quot;))
 
 (if: $event1 is 0)[[[&gt;“锵锵、你被选中了，来陪我加练吧！”-&gt;事件1]]]
 (if:$event2 is 0)[[[&gt;“举起手来，你被绑架了，目标是——游戏厅！”-&gt;事件2]]]
@@ -294,8 +294,8 @@
 听着像置气，有点匪夷所思，如果糸师凛开口反驳，你可能真的会因为某种莫名其妙的情绪和他打在一起。还好他没有。
 他没有，他还在盯着那片玻璃幕墙，连眼睛也不眨，更没有看向你。月亮高悬于空，叫那玻璃也映着银白色的光。三手太阳光，还是很亮堂。
 
-(if:$statustime is &quot;false&quot;)[[[[&gt;你也不出声了。-&gt;主画面1]]]
-(if:$time is 6)[[[&gt;你也不出声了。-&gt;Ending]]]]]]</tw-passagedata><tw-passagedata pid="19" name="Ending" tags="" position="75,825" size="100,100">远处的天幕逐渐泛起白光，夜晚将要结束了。你想起灰姑娘，午夜的钟声响起，魔法将要消失；之于你，则是清晨的太阳升起，魔法将要消失。
+(if:$statustime is &quot;false&quot;)[[[&gt;你也不出声了。-&gt;主画面1]]]
+(if:$time is 6)[[[&gt;你也不出声了。-&gt;Ending]]]]]</tw-passagedata><tw-passagedata pid="19" name="Ending" tags="" position="75,825" size="100,100">远处的天幕逐渐泛起白光，夜晚将要结束了。你想起灰姑娘，午夜的钟声响起，魔法将要消失；之于你，则是清晨的太阳升起，魔法将要消失。
 你最后望一眼糸师凛，那串数字还在他的头顶上挂着：$RN，你没能及格，只是堪堪刷到了正的——居然没有倒扣。
 但，你接着就被推搡着按在墙上，那双青色的眼睛居高临下地望着你，显得好阴沉。
 “说实话吧，”糸师凛说。“你的行为过于反常，该给我一个解释了。”
