@@ -11,7 +11,7 @@
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 怎么个事呢.</tw-noscript></noscript></tw-story>
 <tw-storydata name="怎么个事呢" startnode="12" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="80AC621A-A8AA-4A86-8A04-2470FA069800" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="主画面" tags="" position="225,275" size="100,100">(set:$time to 0)(set:$eventgroup to 0)
 (text-size:2)[现在是$time：00]。
-
+(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 6, &quot;false&quot;))(set:$status1 to (cond:$eventgroup &gt;= 1, &quot;true&quot;, $eventgroup &lt;= 1, &quot;false&quot;))
 
 魔法有了，公主有了，再迟一点，王子殿下和他的室友们该睡觉了。
 赶在王子的冥想结束之前，你需要——
@@ -222,7 +222,7 @@
 青少年的伤春悲秋也没多少，吃味的那个气氛很快散了个干净，他拎着你的后衣领把你揪起来，征询的眼神堪称凶恶。
 你像一只被拎着的猫，准备胡乱用爪子指一个方向——]
 
-(set:$status1 to (cond:$eventgroup &gt;= 1, &quot;true&quot;, $eventgroup &lt;= 1, &quot;false&quot;))(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 6, &quot;false&quot;))
+
 (if: $event1 is 0)[[[&gt;“锵锵、你被选中了，来陪我加练吧！”-&gt;事件1]]]
 (if:$event2 is 0)[[[&gt;“举起手来，你被绑架了，目标是——游戏厅！”-&gt;事件2]]]
 (if:$event3 is 0)[[[&gt;“怎么办呀小凛，我不小心拿到两张电影票……”-&gt;事件3]]]
