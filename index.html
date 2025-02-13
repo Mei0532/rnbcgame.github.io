@@ -9,9 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play 怎么个事呢.</tw-noscript></noscript></tw-story>
-<tw-storydata name="怎么个事呢" startnode="12" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="80AC621A-A8AA-4A86-8A04-2470FA069800" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="主画面" tags="" position="225,275" size="100,100">(set:$time to 0)(set:$eventgroup to 0)
-(text-size:2)[现在是$time：00]。
-(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 6, &quot;false&quot;))
+<tw-storydata name="怎么个事呢" startnode="12" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="80AC621A-A8AA-4A86-8A04-2470FA069800" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="主画面" tags="" position="225,275" size="100,100">(text-size:2)[现在是$time：00]。
 
 魔法有了，公主有了，再迟一点，王子殿下和他的室友们该睡觉了。
 赶在王子的冥想结束之前，你需要——
@@ -30,7 +28,7 @@
 (link:&quot;&gt;你得打乱他的步调。&quot;)[
 [[&gt;“锵锵、你被选中了，来陪我加练吧！”-&gt;事件1]]
 [[&gt;“举起手来，你被绑架了，目标是——游戏厅！”-&gt;事件2]]
-[[&gt;“怎么办呀小凛，我不小心拿到两张电影票……”-&gt;事件3]]]]</tw-passagedata><tw-passagedata pid="3" name="事件1" tags="" position="75,500" size="100,100">(set:$RN to it+5)(set:$event1 to 1)(set:$eventgroup to it+1)
+[[&gt;“怎么办呀小凛，我不小心拿到两张电影票……”-&gt;事件3]]]]</tw-passagedata><tw-passagedata pid="3" name="事件1" tags="" position="75,500" size="100,100">(set:$RN to it+5)(set:$event1 to 1)(set:$eventgroup to it+1)(set:$time to it +2)
 (if:$eventgroup is 1)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]很显然地皱了一下鼻子，总算站起身来，盯着你看了两眼。
 “怎么不找洁世一？”他问，果不其然，不出你所料。](if:$status1 is&quot;true&quot;)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]很显然地皱了一下鼻子，“你从哪里找个足球来？”
 “锵锵！”你说，从背后掏出一颗足球来。“我们是魔法少年欸，足球就是灵魂宝石，怎么能忘了？”
@@ -48,8 +46,7 @@
 你听见他小声地抱怨了一句：莫名其妙。
 你简直也想小声地抱怨一句：太幸运了，唉，有点幸福啊。
 
-[[&gt;继续。-&gt;事件1.1]]]]</tw-passagedata><tw-passagedata pid="4" name="事件1.1" tags="" position="75,625" size="100,100">(set:$time to it +2)
-你果然赢不过他，或者说，你的长处确实不在一对一，好一场以卵击石，你简直要后悔了。
+[[&gt;继续。-&gt;事件1.1]]]]</tw-passagedata><tw-passagedata pid="4" name="事件1.1" tags="" position="75,625" size="100,100">你果然赢不过他，或者说，你的长处确实不在一对一，好一场以卵击石，你简直要后悔了。
 第三次，荧幕显示出3：5的时候，他比你更先一步仰头看计分板，随即立刻露出厌烦的神色了。
 “你到底要做什么？”他问，你盯着他面颊侧边的一滴汗，心想，啊，他得重新洗澡了。
 
@@ -72,7 +69,7 @@
 
 (if:$statustime is &quot;false&quot;)[[[&gt;继续。-&gt;主画面1]]]
 (if:$time is 6)[[[&gt;继续。-&gt;Ending]]]]]
-</tw-passagedata><tw-passagedata pid="5" name="事件2" tags="" position="200,500" size="100,100">(set:$RN to it +2)(set:$event2 to 1)(set:$eventgroup to it+1)
+</tw-passagedata><tw-passagedata pid="5" name="事件2" tags="" position="200,500" size="100,100">(set:$RN to it +2)(set:$event2 to 1)(set:$eventgroup to it+1)(set:$time to it +2)
 (if:$status1 is&quot;false&quot;)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]八风不动，没听你的，甚至疑似翻了个白眼才很嫌弃地开口：“出不去。”
 “杏里酱不在哦，绘心也不在。”你说，很高兴看见他终于微微睁大了眼睛，但你还有话要讲呢：“而且，我有很好的借口，哼哼。跟我走就是了！”
 (link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]的眉毛拧起来了，大概还准备开口了，你眼疾手快——
@@ -98,7 +95,7 @@
 [你大声说，不在乎行人都看过来：“你答应了我的！何况——”
 
 [[&gt;“这才难不住你呢。”-&gt;事件2.1]]
-[[&gt;“我教你不就好啦？”-&gt;事件2.2]]]]</tw-passagedata><tw-passagedata pid="6" name="事件2.1" tags="" position="200,625" size="100,100">(set:$RN to it +5)(set:$time to it +2)离了球场，这人也不是无所不能的——这个认知让你觉得好有趣。你的怪物喜欢他，喜欢球场上的；你现在呢，站在夜半的街头，藉着斑斓的霓虹灯光望着这张面庞，居然觉得心跳这样这样地快。
+[[&gt;“我教你不就好啦？”-&gt;事件2.2]]]]</tw-passagedata><tw-passagedata pid="6" name="事件2.1" tags="" position="200,625" size="100,100">(set:$RN to it +5)离了球场，这人也不是无所不能的——这个认知让你觉得好有趣。你的怪物喜欢他，喜欢球场上的；你现在呢，站在夜半的街头，藉着斑斓的霓虹灯光望着这张面庞，居然觉得心跳这样这样地快。
 他不再反抗了，只是面上仍然显得很不自在……你是那个拽人出来的，因此坚持要付钱，这种不自在变成了气恼，尤其在装硬币的小篮筐落在手里的时候。
 
 (link:&quot;&gt;你甚至还总是对的。&quot;)
@@ -111,7 +108,7 @@
 (link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]看着你，静静地、静静地，等你笑完了。
 
 (if:$statustime is &quot;false&quot;)[[[&gt;也该走了。-&gt;主画面1]]]
-(if:$time is 6)[[[&gt;也该走了。-&gt;Ending]]]]]</tw-passagedata><tw-passagedata pid="7" name="事件2.2" tags="" position="325,625" size="100,100">(set:$RN to it +1)(set:$time to it +2)你其实也没那么会，你骗他的。
+(if:$time is 6)[[[&gt;也该走了。-&gt;Ending]]]]]</tw-passagedata><tw-passagedata pid="7" name="事件2.2" tags="" position="325,625" size="100,100">(set:$RN to it +1)你其实也没那么会，你骗他的。
 国中时期多少还有人乐意和你玩，那时候你的怪物还没长得很大，只是偶尔藏在影子里和你对视……那些同学带你来电玩厅玩了几次之后就腻了，而你爱上了足球，再也没去过。
 糊弄(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]则绰绰有余，家里有个那样的哥哥，是很难想象背着哥哥、或者和哥哥一起来这种地方挥洒青春的，你想象了一下那个画面，嘎嘎地笑出了声。
 糸师凛以为你在嘲笑他，又敲了你的脑袋。
@@ -133,7 +130,7 @@
 
 (if:$statustime is &quot;false&quot;)[[[&gt;啊呀，是很开心的嘛，把人拽出去的动作都温柔多了。-&gt;主画面1]]]
 (if:$time is 6)[[[&gt;啊呀，是很开心的嘛，把人拽出去的动作都温柔多了。-&gt;Ending]]]]
-]]</tw-passagedata><tw-passagedata pid="8" name="事件3" tags="" position="325,500" size="100,100">(set:$event3 to 1)(set:$eventgroup to it+1)
+]]</tw-passagedata><tw-passagedata pid="8" name="事件3" tags="" position="325,500" size="100,100">(set:$event3 to 1)(set:$eventgroup to it+1)(set:$time to it +2)
 (if:$status1 is&quot;false&quot;)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]八风不动，没听你的，甚至疑似翻了个白眼才很嫌弃地开口：“出不去。”
 “杏里酱不在哦，绘心也不在。”你说，很高兴看见他终于微微睁大了眼睛，但你还有话要讲呢：“而且，我有很好的借口，哼哼。跟我走就是了！”
 (link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]的眉毛拧起来了，大概还准备开口了，你眼疾手快——
@@ -153,7 +150,7 @@
 “你才不记得回去的路呢。”你嗤嗤地笑，将手机屏幕翻转过来给他看——他被你拽得太急，甚至根本没带手机。
 “不小心完了，你没有说不要，那就是要！二十分钟后的电影哦。”你跟(set:$RN to it +5)(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]说，“很好的安排吧？”
 
-[[&gt;“还来得及去买爆米花！”-&gt;事件3.1]]]</tw-passagedata><tw-passagedata pid="9" name="事件3.1" tags="" position="450,625" size="100,100">(set:$time to it +2)不出你所料，或者说老天也在帮你：你们抱着一桶爆米花并两杯可乐匆匆穿过座椅时，广告正播放到尾声。圆圆的摄像头正在如人一般蠕动，“盗摄涉嫌触犯法律……”，而你走在(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]前面，荧幕一亮一亮，你猜测他正看着一明一暗的一个背影。
+[[&gt;“还来得及去买爆米花！”-&gt;事件3.1]]]</tw-passagedata><tw-passagedata pid="9" name="事件3.1" tags="" position="450,625" size="100,100">不出你所料，或者说老天也在帮你：你们抱着一桶爆米花并两杯可乐匆匆穿过座椅时，广告正播放到尾声。圆圆的摄像头正在如人一般蠕动，“盗摄涉嫌触犯法律……”，而你走在(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]前面，荧幕一亮一亮，你猜测他正看着一明一暗的一个背影。
 作为玩伴，他显得过于兴致缺缺，爆米花是硬塞进他手里的：你买的情侣套餐，且费了一番功夫说服需要控制体型的另一位运动员。
 他既不高兴，也不真的同你撕破脸皮，总不能今天的他转了心意，想要和朋友们打好关系？
 
@@ -205,7 +202,9 @@
 -总之，情人节快乐！
 
 
-[[&gt;Start!-&gt;共同Part1]]</tw-passagedata><tw-passagedata pid="13" name="未命名片段 1" tags="" position="200,0" size="100,100">好感度：
+[[&gt;Start!-&gt;共同Part1]]
+(set:$status1 to (cond:$eventgroup &gt;= 0, &quot;true&quot;, $eventgroup &lt;= 0, &quot;false&quot;))(set:$time to 0)(set:$eventgroup to 0)(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 5, &quot;false&quot;))
+</tw-passagedata><tw-passagedata pid="13" name="未命名片段 1" tags="" position="200,0" size="100,100">好感度：
 洁世一：$IS
 糸师凛：$RN
 
@@ -221,13 +220,13 @@
 倚着监牢一般的卷帘门，你不由得打量眼前的这位同伴。事到如今，都到了这个时间点，(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]也懒得挣扎，转而摆出无所谓的认命表情，盯着你，等你的下一个计划说出口了。](if:$event5 is 1)[马路墩子真的不好坐，而且就算没穿着校服、不、不如说就是因为没穿校服，你们看起来更像是逃学逃家的青少年了。
 青少年的伤春悲秋也没多少，吃味的那个气氛很快散了个干净，他拎着你的后衣领把你揪起来，征询的眼神堪称凶恶。
 你像一只被拎着的猫，准备胡乱用爪子指一个方向——]
-(set:$status1 to (cond:$eventgroup &gt;= 1, &quot;true&quot;, $eventgroup &lt;= 1, &quot;false&quot;))
+
 
 (if: $event1 is 0)[[[&gt;“锵锵、你被选中了，来陪我加练吧！”-&gt;事件1]]]
 (if:$event2 is 0)[[[&gt;“举起手来，你被绑架了，目标是——游戏厅！”-&gt;事件2]]]
 (if:$event3 is 0)[[[&gt;“怎么办呀小凛，我不小心拿到两张电影票……”-&gt;事件3]]]
 (if:$status1 is&quot;true&quot;)[(if:$event4 is 0)[[[&gt;“我发现呢，从这里去海边也不太远。”-&gt;事件4]]]
-(if:$event5 is 0)[[[&gt;“我想去便利店！”-&gt;事件5]]]]</tw-passagedata><tw-passagedata pid="15" name="事件4" tags="" position="450,500" size="100,100">(set:$RN to it +5)(set:$event4 to 1)(set:$eventgroup to it+1)话是这么说，打车也得花个一小时呢。
+(if:$event5 is 0)[[[&gt;“我想去便利店！”-&gt;事件5]]]]</tw-passagedata><tw-passagedata pid="15" name="事件4" tags="" position="450,500" size="100,100">(set:$RN to it +5)(set:$event4 to 1)(set:$eventgroup to it+1)(set:$time to it +2)话是这么说，打车也得花个一小时呢。
 日本就这么点大，从这里回你在千叶的家，也就三四个小时而已。赶最早的一班新干线——然后被绘心扫地出门，你想了想，决定吐吐舌头，假装自己没有想过。
 “你……”(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]迟疑地说，他的眼睛上下扫过你，看见你露出个纯粹的、欢快的笑容……又挪开了。你看见他举着只手，若无其事地拦住了刚好经过的出租车。
 “最近的海边，麻烦了。”他代你说，“我们想去散步。”
@@ -243,7 +242,7 @@
 你也莫名其妙了，这人叭叭的说什么呢？
 他瞪着你，看着你停下脚步，回转过身同他对视。过了两秒，他说：“玩友好的过家家、整些逃学一样的事情，你大可找别人。”
 
-[[&gt;你睁大眼睛。-&gt;事件4.1]]]]</tw-passagedata><tw-passagedata pid="16" name="事件4.1" tags="" position="575,625" size="100,100">(set:$time to it +2)(set:$RN to it +3)“但是你是最难搞的那个啊。”你理所当然地说。
+[[&gt;你睁大眼睛。-&gt;事件4.1]]]]</tw-passagedata><tw-passagedata pid="16" name="事件4.1" tags="" position="575,625" size="100,100">(set:$RN to it +3)“但是你是最难搞的那个啊。”你理所当然地说。
 (link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]明显露出匪夷所思的表情了：“就为这个？”
 “就为这个。”你说，欢快地踩着他的话音，往前蹦了两步。
 
@@ -263,7 +262,7 @@
 
 (if:$statustime is &quot;false&quot;)[[[&gt;回到闹市，不过是很快的事情。-&gt;主画面1]]]
 (if:$time is 6)[[[&gt;回到闹市，不过是很快的事情。-&gt;Ending]]]]]]
-</tw-passagedata><tw-passagedata pid="17" name="事件5" tags="" position="575,500" size="100,100">(set:$RN to it +7)(set:$event5 to 1)(set:$eventgroup to it+1)这个过于平凡的愿望一讲出口，显得你更像刚出狱的犯罪分子了。好在周围没有人，唯一的听众瘫着个脸，拽着你的手腕往巷子里走。
+</tw-passagedata><tw-passagedata pid="17" name="事件5" tags="" position="575,500" size="100,100">(set:$RN to it +7)(set:$event5 to 1)(set:$eventgroup to it+1)(set:$time to it +2)这个过于平凡的愿望一讲出口，显得你更像刚出狱的犯罪分子了。好在周围没有人，唯一的听众瘫着个脸，拽着你的手腕往巷子里走。
 
 (link:&quot;&gt;愿望实现得轻而易举。&quot;)
 [好歹是这个时间点，这么个开在繁华区街巷里的便利店此刻只有零星的顾客，炸鸡和肉包倒是都没了。你绕着整个店逛了两圈，发觉离了垃圾食品太久——也没太久，有没有一年？——已经不记得哪个口味的薯片好吃，摆在冷柜里的甜点，也都是些新的式样了。
@@ -281,7 +280,8 @@
 “蠢死了。”他说。
 
 [[&gt;“真过分！”-&gt;事件5.1]]
-]]]</tw-passagedata><tw-passagedata pid="18" name="事件5.1" tags="" position="700,625" size="100,100">(set:$time to it +2)“那你别吃了。”糸师凛说，过了一会儿又讲：“随便你。”
+]]]</tw-passagedata><tw-passagedata pid="18" name="事件5.1" tags="" position="700,625" size="100,100">
+“那你别吃了。”糸师凛说，过了一会儿又讲：“随便你。”
 “哥哥君会分给你吃吧？”你说，在他反应过来做之前先把你的那一根拿走，免得他真的戳在你脸上。
 他没否认，盯着对面那栋楼的玻璃幕墙发呆。
 
@@ -295,7 +295,8 @@
 他没有，他还在盯着那片玻璃幕墙，连眼睛也不眨，更没有看向你。月亮高悬于空，叫那玻璃也映着银白色的光。三手太阳光，还是很亮堂。
 
 (if:$statustime is &quot;false&quot;)[[[&gt;你也不出声了。-&gt;主画面1]]]
-(if:$time is 6)[[[&gt;你也不出声了。-&gt;Ending]]]]]</tw-passagedata><tw-passagedata pid="19" name="Ending" tags="" position="75,825" size="100,100">远处的天幕逐渐泛起白光，夜晚将要结束了。你想起灰姑娘，午夜的钟声响起，魔法将要消失；之于你，则是清晨的太阳升起，魔法将要消失。
+(if:$time is 6)[[[&gt;你也不出声了。-&gt;Ending]]]
+]]</tw-passagedata><tw-passagedata pid="19" name="Ending" tags="" position="75,825" size="100,100">远处的天幕逐渐泛起白光，夜晚将要结束了。你想起灰姑娘，午夜的钟声响起，魔法将要消失；之于你，则是清晨的太阳升起，魔法将要消失。
 你最后望一眼糸师凛，那串数字还在他的头顶上挂着：$RN，你没能及格，只是堪堪刷到了正的——居然没有倒扣。
 但，你接着就被推搡着按在墙上，那双青色的眼睛居高临下地望着你，显得好阴沉。
 “说实话吧，”糸师凛说。“你的行为过于反常，该给我一个解释了。”
