@@ -28,8 +28,7 @@
 (link:&quot;&gt;你得打乱他的步调。&quot;)[
 [[&gt;“锵锵、你被选中了，来陪我加练吧！”-&gt;事件1]]
 [[&gt;“举起手来，你被绑架了，目标是——游戏厅！”-&gt;事件2]]
-[[&gt;“怎么办呀小凛，我不小心拿到两张电影票……”-&gt;事件3]]]]</tw-passagedata><tw-passagedata pid="3" name="事件1" tags="" position="75,500" size="100,100">(set:$RN to it+5)(set:$event1 to 1)(set:$eventgroup to it+1)(set:$time to it +2)
-(if:$eventgroup is 1)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]很显然地皱了一下鼻子，总算站起身来，盯着你看了两眼。
+[[&gt;“怎么办呀小凛，我不小心拿到两张电影票……”-&gt;事件3]]]]</tw-passagedata><tw-passagedata pid="3" name="事件1" tags="" position="75,500" size="100,100">(set:$RN to it+5)(set:$event1 to 1)(set:$eventgroup to it+1)(set:$time to it +2)(if:$eventgroup is 1)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]很显然地皱了一下鼻子，总算站起身来，盯着你看了两眼。
 “怎么不找洁世一？”他问，果不其然，不出你所料。](if:$status1 is&quot;true&quot;)[(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]很显然地皱了一下鼻子，“你从哪里找个足球来？”
 “锵锵！”你说，从背后掏出一颗足球来。“我们是魔法少年欸，足球就是灵魂宝石，怎么能忘了？”
 他的神色简直显露出片刻的空白，害你笑了好大一声。“……你原来可以留在那边，让洁世一陪你踢一整晚的球。”他说，有点出乎意料，但没那么出乎意料，且步伐没有停，仍旧跟着你。你松了口气。]
@@ -194,7 +193,8 @@
 [[&gt;继续-&gt;共同Part2]]]]]]]</tw-passagedata><tw-passagedata pid="11" name="共同Part2" tags="" position="75,250" size="100,100">洁世一显得十分、非常、欲言又止……他在你身边踌躇了一会儿，最终还是踩着夜晚十二点的钟声走了：大忙人，有许多事情要做，不管是不是时间正好跳到2月14日，各类日程安排也不会停。
 但关你什么事？你今天要扮演灰姑娘，夜晚结束魔法就要消失，你定好了理想的王子，该去揪他了。
 
-[[&gt;继续？-&gt;主画面]]</tw-passagedata><tw-passagedata pid="12" name="未命名片段" tags="" position="75,0" size="100,100">(text-size:2)[不要乱吃放在桌子上的巧克力]
+[[&gt;继续？-&gt;主画面]]
+</tw-passagedata><tw-passagedata pid="12" name="未命名片段" tags="" position="75,0" size="100,100">(text-size:2)[不要乱吃放在桌子上的巧克力]
 
 -凛蜂only
 -一星期搓出来的粗糙东西
@@ -203,7 +203,7 @@
 
 
 [[&gt;Start!-&gt;共同Part1]]
-(set:$status1 to (cond:$eventgroup &gt;= 0, &quot;true&quot;, $eventgroup &lt;= 0, &quot;false&quot;))(set:$time to 0)(set:$eventgroup to 0)(set:$statustime to (cond:$time &gt;= 6, &quot;true&quot;, $time &lt;= 5, &quot;false&quot;))
+(set:$status1 to (cond:$eventgroup &gt;= 0, &quot;true&quot;, $eventgroup &lt;= 0, &quot;false&quot;))(set:$time to 0)(set:$eventgroup to 0)(set:$statustime to (cond:$time &gt;5, &quot;true&quot;, $time &lt;5, &quot;false&quot;))
 </tw-passagedata><tw-passagedata pid="13" name="未命名片段 1" tags="" position="200,0" size="100,100">好感度：
 洁世一：$IS
 糸师凛：$RN
@@ -220,7 +220,7 @@
 倚着监牢一般的卷帘门，你不由得打量眼前的这位同伴。事到如今，都到了这个时间点，(link-reveal:&quot;糸师凛&quot;)[（他头上挂着一个数字：$RN）]也懒得挣扎，转而摆出无所谓的认命表情，盯着你，等你的下一个计划说出口了。](if:$event5 is 1)[马路墩子真的不好坐，而且就算没穿着校服、不、不如说就是因为没穿校服，你们看起来更像是逃学逃家的青少年了。
 青少年的伤春悲秋也没多少，吃味的那个气氛很快散了个干净，他拎着你的后衣领把你揪起来，征询的眼神堪称凶恶。
 你像一只被拎着的猫，准备胡乱用爪子指一个方向——]
-
+(set:$statustime to (cond:$time &gt;3, &quot;true&quot;, $time &lt;3, &quot;false&quot;))
 
 (if: $event1 is 0)[[[&gt;“锵锵、你被选中了，来陪我加练吧！”-&gt;事件1]]]
 (if:$event2 is 0)[[[&gt;“举起手来，你被绑架了，目标是——游戏厅！”-&gt;事件2]]]
